@@ -30,4 +30,7 @@ public class EstudianteService {
         return estudianterepository.findAll();
     }
     
+        public List<Estudiante> buscarporCedula(String cedula){
+        return estudianterepository.findByCedula(cedula);
+    }
 }

@@ -28,4 +28,8 @@ public class CarreraService {
         return carrerarepository.findAll();
     }
     
+    public List<Carrera> BuscarCarreraporId(int id) {
+        return carrerarepository.findById(id);
+    }
+    
 }

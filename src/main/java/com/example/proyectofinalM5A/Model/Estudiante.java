@@ -27,6 +27,7 @@ public class Estudiante {
     private String correo_institucional;
     private String ciudad;
     private String telefono;
+    private int id_carrera;
 
 
 }

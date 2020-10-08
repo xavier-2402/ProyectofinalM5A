@@ -6,7 +6,9 @@
 package com.example.proyectofinalM5A.Repository;
 
 import com.example.proyectofinalM5A.Model.Carrera;
+import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -15,5 +17,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface CarreraRepository  extends MongoRepository<Carrera,Long>{
-    
+    @Query("{'_id':?0}")
+    List<Carrera> findById(int id);
 }

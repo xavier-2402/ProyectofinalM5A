@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,17 +23,17 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/carrera")
-@CrossOrigin(origins="*")
+@CrossOrigin(origins = "*")
 public class CarreraRest {
+
     @Autowired
     CarreraService carreraservice;
-    
-    
+
     // Metodo post
     @PostMapping(path = "/save")
     public ResponseEntity saveCareer(@RequestBody Carrera carrera) {
         carreraservice.crearCarrera(carrera);
-        return ResponseEntity.ok("Added career with id "+carrera.getId());
+        return ResponseEntity.ok("Added career with id " + carrera.getId());
     }
 
     //Metodo get general
@@ -40,5 +41,9 @@ public class CarreraRest {
     public ResponseEntity listCareers() {
         return ResponseEntity.ok(carreraservice.listarCarreras());
     }
-    
+
+    @GetMapping(path = "/listById/{id}")
+    public ResponseEntity FindById(@PathVariable int id) {
+        return ResponseEntity.ok(carreraservice.BuscarCarreraporId(id));
+    }
 }

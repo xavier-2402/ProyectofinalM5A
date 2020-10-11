@@ -46,5 +46,9 @@ public class EstudianteRest {
         public ResponseEntity FindByCedula( @PathVariable String cedula){
         return ResponseEntity.ok(estudianteservice.buscarporCedula(cedula));
     }
-        
+    
+          @GetMapping(path= "/findbyID/{id}")
+        public ResponseEntity FindById( @PathVariable int id){
+        return ResponseEntity.ok(estudianteservice.buscarporID(id));
+    }    
 }

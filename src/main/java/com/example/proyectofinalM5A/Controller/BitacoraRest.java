@@ -7,6 +7,7 @@ package com.example.proyectofinalM5A.Controller;
 
 import com.example.proyectofinalM5A.Model.Bitacora;
 import com.example.proyectofinalM5A.Service.BitacoraService;
+import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -34,6 +35,7 @@ public class BitacoraRest {
         bitacoraservice.crearBitacora(bitacora);
         return ResponseEntity.ok("Added binnacle with id "+bitacora.getId());
     }
+    
 
     //Metodo get general
     @GetMapping(path = "/list")
@@ -41,4 +43,23 @@ public class BitacoraRest {
         return ResponseEntity.ok(bitacoraservice.listarBitacoras());
     }
     
+      @GetMapping(path = "/list/binnacles/{id_laboratorio}")
+    public ResponseEntity listBinnaclesById_laboratorio(String nombre, int id_laboratorio) {
+        return ResponseEntity.ok(bitacoraservice.buscarporNombreEquipo(nombre, id_laboratorio));
+    }
+       @GetMapping(path = "/list/prueba/binnacles/fecha{fecha/}/equipmentname/{nombre_equipo}/laboratorio/{id_laboratorio}")
+    public ResponseEntity listBinnaclesBySpecificsBinacle(String fecha,int id_laboratorio,String nombre_equipo) {
+        return ResponseEntity.ok(bitacoraservice.buscarporFechaEspecifica(fecha, id_laboratorio, nombre_equipo));
+    }
+    
+       @GetMapping(path = "/list/prueba2/binnacles/equipmentname/{nombre_equipo}/laboratorio/{id_laboratorio}")
+    public ResponseEntity listBinnaclesBySpecificsBinacle2(int id_laboratorio,String nombre_equipo) {
+        return ResponseEntity.ok(bitacoraservice.buscarporFechaEspecifica(
+                id_laboratorio, nombre_equipo));
+    } 
+    
+        @GetMapping(path = "/list/prueba3/binnacles//fecha{/}/equipmentname/{nombre_equipo}/laboratorio/{id_laboratorio}")
+    public ResponseEntity listBinnaclesBySpecificsBinacle3(Date fecha,int id_laboratorio,String nombre_equipo) {
+        return ResponseEntity.ok(bitacoraservice.buscarporFechaEspecifica3(fecha, id_laboratorio, nombre_equipo));
+    }
 }

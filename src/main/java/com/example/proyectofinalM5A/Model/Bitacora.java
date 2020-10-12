@@ -24,5 +24,7 @@ public class Bitacora {
     private Date fecha_bitacora;
     private String descripcion_bitacora;
     private String nombre_equipo;
-    private int id_laboratorio;    
+    private int id_laboratorio; 
+    private int id_estudiante;
+    
 }

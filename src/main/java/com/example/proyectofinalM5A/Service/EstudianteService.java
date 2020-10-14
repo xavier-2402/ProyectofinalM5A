@@ -33,8 +33,5 @@ public class EstudianteService {
         public List<Estudiante> buscarporCedula(String cedula){
         return estudianterepository.findByCedula(cedula);
     }
-        
-        public List<Estudiante> buscarporID(int id){
-            return estudianterepository.findById(id);
-        }
+      
 }

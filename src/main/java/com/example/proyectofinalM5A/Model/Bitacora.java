@@ -25,6 +25,8 @@ public class Bitacora {
     private String descripcion_bitacora;
     private String nombre_equipo;
     private int id_laboratorio; 
-    private int id_estudiante;
-    
+    private String cedula;
+    private String carrera_nombre;
+    private String nivel_nombre;
+    private String nombre_asignatura;
 }

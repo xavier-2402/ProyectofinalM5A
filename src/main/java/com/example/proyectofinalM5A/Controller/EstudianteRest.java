@@ -33,7 +33,7 @@ public class EstudianteRest {
     @PostMapping(path = "/save")
     public ResponseEntity saveStudent(@RequestBody Estudiante estudiante) {
         estudianteservice.crearEstudiante(estudiante);
-        return ResponseEntity.ok("Added student with id "+estudiante.getId());
+        return ResponseEntity.ok("Added student with id "+estudiante.getCedula());
     }
 
     //Metodo get general
@@ -47,8 +47,5 @@ public class EstudianteRest {
         return ResponseEntity.ok(estudianteservice.buscarporCedula(cedula));
     }
     
-          @GetMapping(path= "/findbyID/{id}")
-        public ResponseEntity FindById( @PathVariable int id){
-        return ResponseEntity.ok(estudianteservice.buscarporID(id));
-    }    
+    
 }

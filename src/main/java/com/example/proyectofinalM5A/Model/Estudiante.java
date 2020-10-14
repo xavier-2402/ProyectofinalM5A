@@ -20,7 +20,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Estudiante {
 
     @Id
-    private Long id;
     private String cedula;
     private String nombre;
     private String apellido;

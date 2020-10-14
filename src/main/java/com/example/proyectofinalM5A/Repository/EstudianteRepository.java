@@ -14,10 +14,9 @@ import org.springframework.data.mongodb.repository.Query;
  *
  * @author usuario
  */
-public interface EstudianteRepository extends MongoRepository<Estudiante,Long> {
+public interface EstudianteRepository extends MongoRepository<Estudiante,String> {
     
     List<Estudiante>findByCedula(String cedula);
     
-     @Query("{'_id':?0}")
-    List<Estudiante> findById(int id);
+    
 }

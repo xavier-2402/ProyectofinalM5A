@@ -43,23 +43,23 @@ public class BitacoraRest {
         return ResponseEntity.ok(bitacoraservice.listarBitacoras());
     }
     
-      @GetMapping(path = "/list/binnacles/{id_laboratorio}")
-    public ResponseEntity listBinnaclesById_laboratorio(String nombre, int id_laboratorio) {
-        return ResponseEntity.ok(bitacoraservice.buscarporNombreEquipo(nombre, id_laboratorio));
+      @GetMapping(path = "/list/binnacles/{idLaboratorio}")
+    public ResponseEntity listBinnaclesById_laboratorio(String nombre, int idLaboratorio) {
+        return ResponseEntity.ok(bitacoraservice.buscarporNombreEquipo(nombre, idLaboratorio));
     }
-       @GetMapping(path = "/list/prueba/binnacles/fecha{fecha/}/equipmentname/{nombre_equipo}/laboratorio/{id_laboratorio}")
-    public ResponseEntity listBinnaclesBySpecificsBinacle(String fecha,int id_laboratorio,String nombre_equipo) {
-        return ResponseEntity.ok(bitacoraservice.buscarporFechaEspecifica(fecha, id_laboratorio, nombre_equipo));
+       @GetMapping(path = "/list/prueba/binnacles/fecha{fecha/}/equipmentname/{nombreEquipo}/laboratorio/{idLaboratorio}")
+    public ResponseEntity listBinnaclesBySpecificsBinacle(String fecha,int idLaboratorio,String nombreEquipo) {
+        return ResponseEntity.ok(bitacoraservice.buscarporFechaEspecifica(fecha, idLaboratorio, nombreEquipo));
     }
     
-       @GetMapping(path = "/list/prueba2/binnacles/equipmentname/{nombre_equipo}/laboratorio/{id_laboratorio}")
-    public ResponseEntity listBinnaclesBySpecificsBinacle2(int id_laboratorio,String nombre_equipo) {
+       @GetMapping(path = "/list/prueba2/binnacles/equipmentname/{nombreEquipo}/laboratorio/{idLaboratorio}")
+    public ResponseEntity listBinnaclesBySpecificsBinacle2(int idLaboratorio,String nombreEquipo) {
         return ResponseEntity.ok(bitacoraservice.buscarporFechaEspecifica(
-                id_laboratorio, nombre_equipo));
+                idLaboratorio, nombreEquipo));
     } 
     
-        @GetMapping(path = "/list/prueba3/binnacles//fecha{/}/equipmentname/{nombre_equipo}/laboratorio/{id_laboratorio}")
-    public ResponseEntity listBinnaclesBySpecificsBinacle3(Date fecha,int id_laboratorio,String nombre_equipo) {
-        return ResponseEntity.ok(bitacoraservice.buscarporFechaEspecifica3(fecha, id_laboratorio, nombre_equipo));
+        @GetMapping(path = "/list/prueba3/binnacles//fecha{/}/equipmentname/{nombreEquipo}/laboratorio/{idLaboratorio}")
+    public ResponseEntity listBinnaclesBySpecificsBinacle3(Date fecha,int idLaboratorio,String nombreEquipo) {
+        return ResponseEntity.ok(bitacoraservice.buscarporFechaEspecifica3(fecha, idLaboratorio, nombreEquipo));
     }
 }

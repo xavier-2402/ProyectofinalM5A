@@ -23,10 +23,10 @@ public class Estudiante {
     private String cedula;
     private String nombre;
     private String apellido;
-    private String correo_institucional;
+    private String correoInstitucional;
     private String ciudad;
     private String telefono;
-    private int id_carrera;
+    private int idCarrera;
 
 
 }

@@ -20,9 +20,9 @@ public class Carrera {
 
     @Id
     private Long id;
-    private String carrera_nombre;
-    private String modalidad_carrera;
-    private String nomenclatura_carrera;
+    private String carreraNombre;
+    private String modalidadCarrera;
+    private String nomenclaturaCarrera;
     private String jornada;
     private List<Nivel> niveles;
 

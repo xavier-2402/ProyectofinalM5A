@@ -16,7 +16,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 public class Equipo {
     
-    private String nombre_equipo;
-    private String codigo_equipo;
+    private String nombreEquipo;
+    private String codigoEquipo;
     
 }

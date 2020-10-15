@@ -17,7 +17,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 public class Nivel {
-    private String nivel_nombre;
+    private String nivelNombre;
     private List<Asignatura> asignaturas;
     
 }

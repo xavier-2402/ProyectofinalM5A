@@ -15,8 +15,8 @@ import org.springframework.data.annotation.Id;
 @Data
 public class Asignatura {
 
-    private String nomenclatura_asignatura;
-    private String nombre_asignatura;
-    private String nombre_docente;
+    private String nomenclaturaAsignatura;
+    private String nombreAsignatura;
+    private String nombreDocente;
 
 }

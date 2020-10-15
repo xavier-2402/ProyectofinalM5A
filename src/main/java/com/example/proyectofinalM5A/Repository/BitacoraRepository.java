@@ -19,17 +19,17 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BitacoraRepository extends MongoRepository<Bitacora,Long>{
         
-     @Query("{'nombre_equipo':?0,'id_laboratorio':?1}")
-    List<Bitacora> findByEquipmentname(String nombre_equipo,int id_laboratorio);
+     @Query("{'nombreEquipo':?0,'idLaboratorio':?1}")
+    List<Bitacora> findByEquipmentname(String nombreEquipo,int idLaboratorio);
     
-    @Query("{fecha_bitacora:ISODate(?0),'id_laboratorio':?1,'nombre_equipo':?2}")
-    List<Bitacora> findSpecificsBinacle(String fecha,int id_laboratorio,String nombre_equipo);
+    @Query("{fechaBitacora:ISODate(?0),'idLaboratorio':?1,'nombreEquipo':?2}")
+    List<Bitacora> findSpecificsBinacle(String fecha,int idLaboratorio,String nombreEquipo);
     
       
-    @Query("'id_laboratorio':?1,'nombre_equipo':?2}")
-    List<Bitacora> findSpecificsBinacle2(int id_laboratorio,String nombre_equipo);
+    @Query("'idLaboratorio':?1,'nombreEquipo':?2}")
+    List<Bitacora> findSpecificsBinacle2(int idLaboratorio,String nombreEquipo);
     
-    @Query("{fecha_bitacora:?0,'id_laboratorio':?1,'nombre_equipo':?2}")
-    List<Bitacora> findSpecificsBinacle3(Date fecha,int id_laboratorio,String nombre_equipo);
+    @Query("{fechaBitacora:?0,'idLaboratorio':?1,'nombreEquipo':?2}")
+    List<Bitacora> findSpecificsBinacle3(Date fecha,int idLaboratorio,String nombreEquipo);
     
 }

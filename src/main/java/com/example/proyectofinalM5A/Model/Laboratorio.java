@@ -20,7 +20,7 @@ public class Laboratorio {
 
     @Id
     private Long id;
-    private String nombre_laboratorio;
+    private String nombreLaboratorio;
     private String edificio;
     private List<Equipo> equipos;
 

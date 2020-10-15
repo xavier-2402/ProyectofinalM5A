@@ -21,12 +21,16 @@ public class Bitacora {
 
     @Id
     private Long id;
-    private Date fecha_bitacora;
-    private String descripcion_bitacora;
-    private String nombre_equipo;
-    private int id_laboratorio; 
+    private String fechaBitacora;
+    private String descripcionBitacora;
+    private String nombreEquipo;
+    private int idLaboratorio; 
     private String cedula;
-    private String carrera_nombre;
-    private String nivel_nombre;
-    private String nombre_asignatura;
+    private String carreraNombre;
+    private String nivelNombre;
+    private String nombreAsignatura;
+
+
+    
+    
 }
